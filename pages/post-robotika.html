@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementasi Algoritma Kontrol | Robotics Journal</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #000000; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6;">
+
+    <div style="max-width: 800px; margin: 0 auto; padding: 80px 20px;">
+        
+        <a href="../blog.html" style="color: #666; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">&larr; Back to Journal</a>
+
+        <header style="margin-top: 60px; margin-bottom: 60px;">
+            <p style="font-size: 0.75rem; color: #444; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px;">Engineering / Riset</p>
+            <h1 style="font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 800; line-height: 1; letter-spacing: -2px; margin: 0;">IMPLEMENTASI ALGORITMA KONTROL PADA ROBOT SOCCER KRSBI-B</h1>
+            <p style="color: #666; margin-top: 20px; font-size: 1.1rem;">MARET 2026 — BY Mark Tumanduk</p>
+        </header>
+
+        <main style="font-size: 1.1rem; color: #ccc;">
+            
+            <p style="margin-bottom: 25px;">
+                Dunia robotika bukan hanya soal perangkat keras yang kokoh, tetapi bagaimana "otak" di dalamnya mampu memproses data dengan cepat. Di tim **KRSBI-B Universitas Sam Ratulangi**, fokus utama kami adalah menciptakan pergerakan robot yang halus namun tetap agresif saat mengejar bola di lapangan.
+            </p>
+
+            <h2 style="color: #fff; font-size: 1.8rem; margin: 40px 0 20px 0; letter-spacing: -1px;">1. Tantangan Presisi</h2>
+            <p style="margin-bottom: 25px;">
+                Masalah klasik yang sering kami temui adalah *overshoot*—situasi di mana robot meluncur terlalu jauh melewati target karena kecepatannya. Untuk mengatasi ini, kami menerapkan algoritma **PID (Proportional, Integral, Derivative)**.
+            </p>
+
+            <div style="background-color: #0a0a0a; border: 1px solid #1a1a1a; padding: 25px; border-radius: 4px; margin: 30px 0; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+                <span style="color: #666;">// Contoh logika dasar PID dalam C++</span><br>
+                <span style="color: #569cd6;">float</span> error = target_posisi - posisi_sekarang;<br>
+                P = Kp * error;<br>
+                I += Ki * error;<br>
+                D = Kd * (error - last_error);<br>
+                output_motor = P + I + D;
+            </div>
+
+            <h2 style="color: #fff; font-size: 1.8rem; margin: 40px 0 20px 0; letter-spacing: -1px;">2. Pengujian Lapangan</h2>
+            <p style="margin-bottom: 25px;">
+                Setelah koding selesai, tahap berikutnya adalah *tuning* nilai Kp, Ki, dan Kd. Melalui simulasi di lab UNSRAT, kami menemukan bahwa keseimbangan antara kecepatan rotasi motor dan deteksi sensor kamera adalah kunci agar robot tidak "bingung" saat bola bergerak cepat.
+            </p>
+
+            <blockquote style="margin: 40px 0; padding: 20px; border-left: 2px solid #fff; background-color: #050505; font-style: italic; color: #fff;">
+                "Efisiensi kode menentukan seberapa cepat robot mengambil keputusan di bawah tekanan pertandingan."
+            </blockquote>
+
+            <h2 style="color: #fff; font-size: 1.8rem; margin: 40px 0 20px 0; letter-spacing: -1px;">3. Kesimpulan</h2>
+            <p style="margin-bottom: 25px;">
+                Implementasi ini membuktikan bahwa Teknik Informatika bukan sekadar aplikasi desktop atau web, tetapi juga tentang bagaimana baris kode dapat menggerakkan benda fisik dengan kecerdasan buatan sederhana.
+            </p>
+
+        </main>
+
+        <footer style="margin-top: 100px; padding-top: 50px; border-top: 1px solid #1a1a1a;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <p style="font-size: 0.7rem; color: #333; letter-spacing: 2px; text-transform: uppercase;">Design Thoughts / 2026</p>
+                <a href="../blog.html" style="color: #fff; text-decoration: none; border: 1px solid #fff; padding: 12px 35px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; transition: 0.3s;">Back</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
